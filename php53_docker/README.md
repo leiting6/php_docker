@@ -20,7 +20,7 @@ pid = run/php-fpm.pid
 
 error_log = log/php-fpm.log
 
-log_level = notice
+log_level = error
 
 emergency_restart_threshold = 10
 
