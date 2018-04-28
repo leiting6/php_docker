@@ -7,6 +7,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN yum install -y \
 tar.x86_64 \
 wget \
+git \
 vim \
 unzip \
 net-tools \
