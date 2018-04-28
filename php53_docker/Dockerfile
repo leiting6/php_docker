@@ -6,6 +6,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN yum install -y \
 wget \
+git \
 vim \
 unzip \
 net-tools \
@@ -106,6 +107,8 @@ RUN cd /opt/php-memcache-3.0.9~20160311.4991c2f/memcache-3.0.9 && ./configure --
 ADD php53/php-fpm.conf /usr/local/php-5.3.10/etc/
 ADD php53/php.ini /usr/local/php-5.3.10/etc/
 
+RUN cd /tmp && curl -sS https://getcomposer.org/installer | php
+RUN mv /tmp/composer.phar /usr/local/bin/composer
 
 #COPY src/Python-2.7.13.tar.gz /opt
 #RUN cd /opt && tar zxf Python-2.7.13.tar.gz
