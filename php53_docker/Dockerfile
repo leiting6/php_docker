@@ -75,7 +75,7 @@ RUN ln -s /usr/local/php-5.3.10/bin/php53 /usr/local/php-5.3.10/bin/php
 RUN ln -s /usr/local/php-5.3.10/sbin/php-fpm-53 /usr/local/php-5.3.10/sbin/php-fpm
 ENV PATH=$PATH:/usr/local/php-5.3.10/bin/:/usr/local/php-5.3.10/sbin/
 
-RUN useradd --create-home -s /bin/bash -u 60001 www
+RUN useradd --create-home -s /bin/bash -u 6001 www
 
 COPY php53/eaccelerator-0.9.6.1.tar.bz2 /opt/
 RUN cd /opt/ && tar -jxf eaccelerator-0.9.6.1.tar.bz2
