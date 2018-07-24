@@ -66,7 +66,7 @@ RUN yum -y install epel-release && yum install -y libmcrypt libmcrypt-devel mcry
 
 RUN cp /usr/lib64/libldap* /usr/lib/
 
-RUN useradd --create-home -s /bin/bash -u 60001 www
+RUN useradd --create-home -s /bin/bash -u 6001 www
 
 COPY php70/php-7.0.28.tar.gz /opt/
 RUN cd /opt && tar zxf php-7.0.28.tar.gz
